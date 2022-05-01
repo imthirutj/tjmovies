@@ -21,40 +21,40 @@ import javax.websocket.server.PathParam;
 
 @RestController
 public class HomeController {
-	
+
 	@Autowired
 	private MovieService movieService;
-	
-	@GetMapping("/home")
+
+	@GetMapping("/")
 	public String Home() {
 		return "Welcome to home";
 	}
 	
+	
 	@GetMapping("/get")
-	public List<MovieEntity> getMovie(){
-		
+	public List<MovieEntity> getMovie() {
+
 		return movieService.getMovie();
-		
+
 	}
-	
+
 	@GetMapping("/getBy")
-	public Optional<MovieEntity> getId(@RequestParam Integer Id){
-		
+	public Optional<MovieEntity> getId(@RequestParam Integer Id) {
+
 		return movieService.getId(Id);
-		
+
 	}
-	
+
 	@PostMapping("/create")
 	public MovieEntity createMv(@RequestBody MovieEntity movieEntity) {
 		return movieService.createMv(movieEntity);
 	}
-	
-	
-	
-	
-	
 
-	//thymeleaf
+	
+	 
+	 
+
+	// thymeleaf
 	/*
 	 * @RequestMapping("/mvUI") public ModelAndView welcome() { ModelAndView
 	 * modelAndView = new ModelAndView(); modelAndView.setViewName("index"); return
@@ -64,6 +64,5 @@ public class HomeController {
 	 * MovieEntity mvEntity, Model model) { model.addAttribute("mvEntity",mvEntity);
 	 * return "result"; }
 	 */
-	
 
 }

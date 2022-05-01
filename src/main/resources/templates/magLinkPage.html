@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="ISO-8859-1">
+<title>Link Insert</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" th:href="@{/css/bodystyle.css}">
+<script type="text/javascript" th:src="@{/script/clip.js}"></script>
+
+</head>
+<body>
+
+
+<div class="login-box">
+  <form th:action="@{magLinkForm}" th:object="${MovieEntity}" method="post">
+  <br><br></br>
+<h3 style="color: orange;" th:text="${msg}"></h3> 
+  <br><br><br>
+    <div class="user-box">
+      <input id="id" type="text" name="id" required="Id must fill" th:value=${ID}>
+      <label>ID</label>
+    </div>
+    <div class="user-box">
+     <button style="font-size:24px;margin: 0px 0px 0px 93%; vertical-align: top;display: inline-block;" onclick="myFunction('mag_1');return false;"><i class="fa fa-clipboard"></i></button>
+      <button style="font-size:24px; margin: -33px 0px 0px 80%;vertical-align: top;display: inline-block; " onclick="document.getElementById('mag_1').value = '';return false"><i class="fa fa-remove"></i></button>
+      <input id="mag_1" type="text" name="mag_1"  th:value=${mag_1}>
+      <label>Magnetic Link 1</label>
+	</div>
+	
+	<div class="user-box">
+     <button style="font-size:24px;margin: 0px 0px 0px 93%; vertical-align: top;display: inline-block;" onclick="myFunction('mag_2');return false;"><i class="fa fa-clipboard"></i></button>
+      <button style="font-size:24px; margin: -33px 0px 0px 80%;vertical-align: top;display: inline-block; " onclick="document.getElementById('mag_2').value = '';return false"><i class="fa fa-remove"></i></button>
+      <input id="mag_2" type="text" name="mag_2"  th:value=${mag_2}>
+      <label>Magnetic Link 2</label>
+	</div>
+	
+	<div class="user-box">
+     <button style="font-size:24px;margin: 0px 0px 0px 93%; vertical-align: top;display: inline-block;" onclick="myFunction('mag_3');return false;"><i class="fa fa-clipboard"></i></button>
+      <button style="font-size:24px; margin: -33px 0px 0px 80%;vertical-align: top;display: inline-block; " onclick="document.getElementById('mag_3').value = '';return false"><i class="fa fa-remove"></i></button>
+      <input id="mag_3" type="text" name="mag_3"  th:value=${mag_3}>
+      <label>Magnetic Link 3</label>
+	</div>
+	
+	
+	<div class="user-box">
+     <button style="font-size:24px;margin: 0px 0px 0px 93%; vertical-align: top;display: inline-block;" onclick="myFunction('mag_4');return false;"><i class="fa fa-clipboard"></i></button>
+      <button style="font-size:24px; margin: -33px 0px 0px 80%;vertical-align: top;display: inline-block; " onclick="document.getElementById('mag_4').value = '';return false"><i class="fa fa-remove"></i></button>
+      <input id="mag_4" type="text" name="mag_4" th:value=${mag_4}>
+      <label>Magnetic Link 4</label>
+	</div>
+	
+	
+	<div class="user-box">
+     <button style="font-size:24px;margin: 0px 0px 0px 93%; vertical-align: top;display: inline-block;" onclick="myFunction('mag_5');return false;"><i class="fa fa-clipboard"></i></button>
+      <button style="font-size:24px; margin: -33px 0px 0px 80%;vertical-align: top;display: inline-block; " onclick="document.getElementById('mag_5').value = '';return false"><i class="fa fa-remove"></i></button>
+      <input id="mag_5" type="text" name="mag_5"  th:value=${mag_5}>
+      <label>Magnetic Link 5</label>
+	</div>
+	
+	
+	
+      <input id="sub" style="opacity: 70%;" type="submit" value="submit">
+   
+  </form>
+
+</div>
+
+
+</body>
+</html>
