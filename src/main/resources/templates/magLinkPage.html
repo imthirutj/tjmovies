@@ -11,13 +11,45 @@
 
 </head>
 <body>
-
+<style>
+.home{
+-webkit-filter:invert(100%);
+     filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+     width:15%;
+     height:15%;
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+#updst{
+ position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em; 
+    margin: 93px 0px 0px 0px;
+}
+</style>
 
 <div class="login-box">
   <form th:action="@{magLinkForm}" th:object="${MovieEntity}" method="post">
-  <br><br></br>
-<h3 style="color: orange;" th:text="${msg}"></h3> 
-  <br><br><br>
+  <br>
+<h3 id="updst" th:text="${msg}"></h3> 
+ <a href="/index.html" class="play" onclick="toggle();"><img class="home" src="/Images/homeIcon.png" alt=""></a>
+
+  <br>
     <div class="user-box">
       <input id="id" type="text" name="id" required="Id must fill" th:value=${ID}>
       <label>ID</label>
