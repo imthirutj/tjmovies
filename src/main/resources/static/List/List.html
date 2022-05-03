@@ -2,12 +2,29 @@
 <html xmlns:th="https://thymeleaf.org">    
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert Links</title>
+<title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script type="text/javascript" src="/script/listscript.js"></script>
 
   <link rel="stylesheet"  href="../css/liststyle.css">
+  
+  
+  <style>
+  @media only screen and (orientation:portrait){
+  #iframe-embed {
+       height: auto;
+    /* height: 100vw; */
+    transform: rotate(90deg);
+    width: auto;
+    top: 148px;
+    right: 319px;
+  }
+/*   #iframe-embed{
+  height:100px;
+  width:100px;} */
+}</style>
+  
 </head>
 
 
@@ -40,6 +57,11 @@
  	 <div class="trailer" id="trailer">
  	 <!-- <span id="close"><img src="/List/close.png" onclick="close();" "></span> -->
  <a href=""javascript:close();" id="close" class="close" ><img src="/List/close.png" alt=""></a>
+ 
+<!--  <a href=""javascript:transform();" id="close" class="close" ><img src="/Images/transform.png" alt=""></a> -->
+
+
+
 <iframe id="iframe-embed" width="500px" height="300px" scrolling="no" frameborder="0"
  src="" 
  allowfullscreen="true" webkitallowfullscreen="true" 

@@ -8,11 +8,17 @@
         
         const data= await response.json();
         
+        document.title=data.original_title;
+        
         document.getElementById("mv_name").innerHTML=data.original_title;
         const img ='https://image.tmdb.org/t/p/w1066_and_h600_face/'+data.backdrop_path;
         const desc=data.overview;
+        
+        //desc
         document.getElementById("desc").innerHTML=desc;
         
+        
+        //add-video
         document.getElementById("iframe-embed").src='https://www.2embed.ru/embed/tmdb/movie?id='+id;
       
         
@@ -29,4 +35,9 @@
          	document.getElementById("addmag").href ="/magLinkForm?Id="+id;
        
         }
+        
         getdata();
+        
+        function transform(){
+	document.getElementById("trailer").style.transform='rotate(90deg)';
+}
