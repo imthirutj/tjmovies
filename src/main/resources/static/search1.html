@@ -325,27 +325,15 @@ form.search::after {
         </ul>
     </nav>
 
-    <!-- Header -->
-    <header class="masthead d-flex">
-        <div class="container text-center my-auto">
-            <h1 class="mb-1">Black Widow</h1>
-            <h3 class="mb-5">
-                <em>Available On TJ PRODUCTIONZ</em>
-            </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="Movies/BlackWidow/BlackWidow.html">Watch Trailer
-                Now</a>
-        </div>
-        <div class="overlay"></div>
-    </header>
 
 
    
 
 
     <!-- english movies section start -->
-    <section id="EnglishMovies">
+    <section id="SearchMovies">
         <div class="Container">
-            <h2>English Movies</h2>
+            <h2>English Movies</h2><p th:text="${sid}"></p>
             <div class="row Movies" id="rowMovies">
             
                 <!-- <div class="col-lg-3 col-md-4 col-sm-6">
@@ -379,7 +367,7 @@ form.search::after {
   var post=0;
 
   //api get trending movie
-  const url='https://api.themoviedb.org/3/movie/popular?api_key=bfac75eed7ea2964815538e5c47534fa&language=en-US&page=1';
+  const url='https://api.themoviedb.org/3/search/movie?api_key=bfac75eed7ea2964815538e5c47534fa&query='+414906+'&language=en-US&page=1';
 async function getdata(){
 const response=await fetch(url);
 
@@ -529,16 +517,3 @@ getdata();
 </body>
 
 </html>
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

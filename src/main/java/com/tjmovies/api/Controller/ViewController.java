@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.google.common.base.Optional;
 import com.tjmovies.api.Entity.MovieEntity;
@@ -26,7 +28,20 @@ public class ViewController {
 	
 	@Autowired
 	private MovieService movieService;
-
+	
+	@GetMapping("/")
+	public String Home() {
+	
+	    return "redirect:/index.html";
+	}
+	
+	@GetMapping("/search")
+		public String search(@RequestParam String search2, Model model) {
+		model.addAttribute("sid",search2);
+			return "search";
+		}
+	
+	
 	 @GetMapping("/magLinkForm")
 	  
 	  public String getform(@RequestParam(required = false) Integer Id,Model model) {

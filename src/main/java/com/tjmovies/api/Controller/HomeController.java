@@ -25,10 +25,6 @@ public class HomeController {
 	@Autowired
 	private MovieService movieService;
 
-	@GetMapping("/")
-	public String Home() {
-		return "Welcome to home";
-	}
 	
 	
 	@GetMapping("/get")
