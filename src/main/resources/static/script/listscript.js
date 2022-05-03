@@ -11,7 +11,9 @@
         document.title=data.original_title;
         
         document.getElementById("mv_name").innerHTML=data.original_title;
-        const img ='https://image.tmdb.org/t/p/w1066_and_h600_face/'+data.backdrop_path;
+	 
+	  const img ='https://image.tmdb.org/t/p/w1280_and_h720_face/'+data.backdrop_path;
+       // const img ='https://image.tmdb.org/t/p/w1066_and_h600_face/'+data.backdrop_path;
         const desc=data.overview;
         
         //desc
