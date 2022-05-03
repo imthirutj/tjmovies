@@ -199,7 +199,7 @@
 	position:absolute;
 	-webkit-filter:invert(100%);
      filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
-    top:100px;
+    top:10px;
     left:280px;
 }
 }

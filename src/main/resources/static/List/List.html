@@ -8,27 +8,24 @@
 <script type="text/javascript" src="/script/listscript.js"></script>
 
   <link rel="stylesheet"  href="../css/liststyle.css">
-  
-  
-  <style>
-  @media only screen and (orientation:portrait){
-  #iframe-embed {
-       height: auto;
-    /* height: 100vw; */
-    transform: rotate(90deg);
-    width: auto;
-    top: 148px;
-    right: 319px;
-  }
-/*   #iframe-embed{
-  height:100px;
-  width:100px;} */
-}</style>
-  
 </head>
 
 
+<style>
+@media only screen and (orientation:portrait){
+#iframe-embed{
+ transform: rotate(90deg);
 
+    position: absolute;
+   
+    transform-origin: center;
+}
+.close{
+
+top:10px;
+left:280px;
+}}
+</style>
     
     
 
@@ -58,7 +55,7 @@
  	 <!-- <span id="close"><img src="/List/close.png" onclick="close();" "></span> -->
  <a href=""javascript:close();" id="close" class="close" ><img src="/List/close.png" alt=""></a>
  
-<!--  <a href=""javascript:transform();" id="close" class="close" ><img src="/Images/transform.png" alt=""></a> -->
+<!--  <a href=""javascript:close();" id="close" class="close" ><img src="/Images/transform.png" alt=""></a> -->
 
 
 
